@@ -1,0 +1,12 @@
+.DS_Store
+Thumbs.db
+/input-cache/org.hl7.fhir.publisher.jar
+/output
+/template
+/temp
+/input
+/ig.ini
+/package.json
+/package-list.json
+/build*
+SUSHI-GENERATED-FILES.md
