@@ -28,7 +28,7 @@ Description:    "An evaluation of an Immunization event for the patient against 
 * doseStatus 1..1
 * doseStatus from http://hl7.org/fhir/ValueSet/immunization-evaluation-dose-status (extensible)
 * doseStatusReason MS
-* doseStatusReason from http://hl7.org/fhir/R4/valueset-immunization-evaluation-dose-status-reason.html (extensible)
+* doseStatusReason from StatusReason (extensible)
 
 
 Profile:        ImmDSImmunizationRecommendation
@@ -164,6 +164,29 @@ Description:	"A set of reasons for the forecast status."
 * #maximumAge "Maximum Age Exceeded" "The patient has exceeded the maximum recommended age"
 * #seasonalPast "Seasonal End Date Passed" "The recommended end date for the seasonal vaccine has passed"
 * #seasonalComplete "Complete for the Season" "The patient is complete for the season"
+
+
+ValueSet:		StatusReason
+Title:			"Evaluation Status Reason"
+Description:	"A set of reasons for the evaluation status."
+* codes from system StatusReason
+
+
+
+CodeSystem:		StatusReason
+Title:			"Evaluation Status Reason"
+Description:	"A set of reasons for the evaluation status."
+* #expired "Past Expiration Date" "Vaccine Dose Administered was administered after the Lot Number Expiration Date"
+* #tooyoung "Patient Too Young" "Vaccine Dose Administered was administered at too young of an age"
+* #tooold "Patient Too Old" "Vaccine Dose Administered was administered at too old of an age"
+* #inappropriate "Inappropriate Vaccine" "Vaccine Dose Administered was an inappropriate vaccine (e.g. vaccine not licensed for the patient age)"
+* #toosoon "Administered Too Soon" "Vaccine Dose Administered was administered too soon following a previous dose"
+* #productconflict "Product Conflict" "Vaccine Dose Administered was administered too close to another vaccine or other product (e.g. Immune Globulin conflict or live virus conflict)"
+* #quantity "Insufficient Quantity" "Vaccine Dose Administered amount was less than the recommended amount"
+* #recall "Recalled Product" "Vaccine Dose Administered was recalled by the manufacturer"
+* #storage "Adverse Storate Conditions" "Vaccine Dose Administered experienced adverse storage conditions (e.g. cold chain break)"
+* #notevaluated "Not Evaluated" "Vaccine Dose Administered was not evaluated"
+
 
 
 ValueSet:		ForecastReason
