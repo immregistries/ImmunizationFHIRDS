@@ -11,16 +11,16 @@ There is a difference between the patient’s immunization history and the patie
 # EHR Query to IIS (via existing v2)
 This use case describes a typical transaction found in production exchanges today. An EHR User (or an automated trigger) issues a v2 query to the local IIS for a specific patient. The IIS finds the patient, performs the CDS and then packages that information up and returns it to the EHR in a v2 response message. In this case, the IIS outsources the evaluation and recommendation process to an external CDS engine. Note that the logic used by the CDS engine to perform the evaluation and forecast is out of scope for this implementation guide as is the mechanism for executing the v2 query and response.
 
-![EHR Query to IIS (via existing v2)](./UseCase_EHRQuerytoIISv2.png)
+![EHR Query to IIS (via existing v2)](ImmunizationCDSonFHIR-EHRtoIIS.png)
 
 
 # Application User Interface
 This use case describes a typical use of an application found in production today. In this example, an IIS User logs into the IIS and natively uses the IIS User Interface to query for a specific patient in the IIS. The IIS finds the patient, performs the CDS and then packages that information up and returns it to the IIS User Interface for immediate display. Note that that the application in this use case could easily have been an EHR which uses an external CDS engine.
 
-![Application User Interface](./UseCase_IISUserInterface.png)
+![Application User Interface](ImmunizationCDSonFHIR-IISUserinterface.png)
 
 
 # Public Health Function
 This use case describes a typical public health function found within IIS production systems today. Many activities an IIS performs results in looping over a cohort of patients (defined by the public health activity) and determining their Immunization Status and/or need for further vaccination. This occurs in AFIX visits, up-to-date reports, reminder/recall activities, etc.
  
-![Public Health Function](./UseCase_PublicHealthFunction.png)
+![Public Health Function](ImmunizationCDSonFHIR-IISFunction.png)

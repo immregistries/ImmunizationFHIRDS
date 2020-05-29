@@ -1,4 +1,4 @@
-Alias:			SCT = http://www.snomed.org/
+Alias:			SCT = http://www.snomed.org/sct
 
 Profile:        ImmDSPatient
 Parent:         http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient

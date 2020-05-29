@@ -11,7 +11,7 @@
   },
   "keywords": [
     "Immunization",
-	"Forecast",
+    "Forecast",
     "Public Health"
   ],
   "language": "en",
@@ -19,7 +19,7 @@
   "maintainers": [
     {
       "name": "Nathan Bunker",
-      "email": "nbunker@immregistry.org"
+      "email": "mailto:nbunker@immregistry.org"
     }
   ],
   "license": "CC0-1.0"

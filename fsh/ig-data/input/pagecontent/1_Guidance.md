@@ -26,4 +26,6 @@ The US Core Immunization profile used by this implementation guide only requires
 * reaction
 
 ## General Security
-Implementers should be aware of FHIR Security and follow the FHIR Implementer’s Safety Check List.
+Implementers should be aware of [FHIR Security](https://www.hl7.org/FHIR/security.html) and follow the [FHIR Implementer’s Safety Check List](https://www.hl7.org/FHIR/safety.html).
+
+[I'm an inline-style link](https://www.google.com)
