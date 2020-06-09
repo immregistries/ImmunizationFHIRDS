@@ -1,4 +1,8 @@
 Alias:			SCT = http://www.snomed.org/sct
+Alias:			LN = http://loinc.org
+Alias:			CVX = http://hl7.org/fhir/sid/cvx
+Alias:			COUNTRY = urn:iso:std:iso:3166
+Alias:			dateCriterion = http://hl7.org/fhir/ValueSet/immunization-recommendation-date-criterion
 
 Profile:        ImmDSPatient
 Parent:         http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
@@ -6,6 +10,7 @@ Id:             immds-patient
 Title:          "ImmDS Patient"
 Description:    "A patient for whom immunization forecast is being requested."
 * birthDate 1..1 MS
+* ^jurisdiction.coding = COUNTRY#US "United States of America"
 
 
 Profile:        ImmDSImmunization
@@ -14,6 +19,7 @@ Id:             immds-immunization
 Title:          "ImmDS Immunization"
 Description:    "Immunization event for the patient."
 * patient only Reference(ImmDSPatient)
+* ^jurisdiction.coding = COUNTRY#US "United States of America"
 
 
 Profile:        ImmDSImmunizationEvaluation
@@ -29,6 +35,7 @@ Description:    "An evaluation of an Immunization event for the patient against 
 * doseStatus from http://hl7.org/fhir/ValueSet/immunization-evaluation-dose-status (extensible)
 * doseStatusReason MS
 * doseStatusReason from StatusReason (extensible)
+* ^jurisdiction.coding = COUNTRY#US "United States of America"
 
 
 Profile:        ImmDSImmunizationRecommendation
@@ -37,12 +44,13 @@ Id:             immds-immunizationrecommendation
 Title:          "ImmDS Immunization Recommendation"
 Description:    "The set of immunization recommendations for the patient."
 * patient only Reference(ImmDSPatient)
-* recommendation.vaccineCode from http://hl7.org/fhir/us/core/ValueSet/us-core-vaccines-cvx (extensible)
+* recommendation.vaccineCode from CVX (extensible)
 * recommendation.targetDisease from TargetDisease (extensible)
-* recommendation.contraindicatedVaccineCode from http://hl7.org/fhir/us/core/ValueSet/us-core-vaccines-cvx (extensible)
+* recommendation.contraindicatedVaccineCode from CVX (extensible)
 * recommendation.forecastStatus from ForecastStatus (preferred)
 * recommendation.forecastReason from ForecastReason (example)
-* recommendation.dateCriterion.code from http://hl7.org/fhir/ValueSet/immunization-recommendation-date-criterion (extensible)
+* recommendation.dateCriterion.code from dateCriterion (extensible)
+* ^jurisdiction.coding = COUNTRY#US "United States of America"
 
 
 Instance:		ImmDSForecastOperation
@@ -87,6 +95,8 @@ Description:	"The Immunization Decision Support Forecast Request operation to pr
 * parameter[4].max = "1"
 * parameter[4].documentation = "The decision support engine produced forecast."
 * parameter[4].type = #ImmunizationRecommendation
+//* ^jurisdiction.coding = COUNTRY#US "United States of America"
+
 
 
 ValueSet:		TargetDisease
@@ -136,6 +146,7 @@ Description:	"A set of vaccine preventable target diseases."
 * SCT#186747009  "Coronavirus infection"
 * SCT#67924001  "Smallpox"
 * SCT#70090004  "Cowpox"
+* ^jurisdiction.coding = COUNTRY#US "United States of America"
 
 
 CodeSystem:		ForecastStatus
@@ -148,12 +159,14 @@ Description:	"A set of forecast statuses."
 * #contraindicated "Contraindicated" "The patient is contraindicated for the vaccine"
 * #agedOut "Aged Out" "The patient is past the recommendated maximum age for vaccination"
 * #conditional "Conditional" "The patient may be recommended for vaccination depending on other attributes"
+* ^jurisdiction.coding = COUNTRY#US "United States of America"
 
 
 ValueSet:		ForecastStatus
 Title:			"Forecast Status"
 Description:	"A set of forecast statuses."
 * codes from system ForecastStatus
+* ^jurisdiction.coding = COUNTRY#US "United States of America"
 
 
 CodeSystem:		ForecastReason
@@ -164,12 +177,14 @@ Description:	"A set of reasons for the forecast status."
 * #maximumAge "Maximum Age Exceeded" "The patient has exceeded the maximum recommended age"
 * #seasonalPast "Seasonal End Date Passed" "The recommended end date for the seasonal vaccine has passed"
 * #seasonalComplete "Complete for the Season" "The patient is complete for the season"
+* ^jurisdiction.coding = COUNTRY#US "United States of America"
 
 
 ValueSet:		StatusReason
 Title:			"Evaluation Status Reason"
 Description:	"A set of reasons for the evaluation status."
 * codes from system StatusReason
+* ^jurisdiction.coding = COUNTRY#US "United States of America"
 
 
 
@@ -186,10 +201,11 @@ Description:	"A set of reasons for the evaluation status."
 * #recall "Recalled Product" "Vaccine Dose Administered was recalled by the manufacturer"
 * #storage "Adverse Storate Conditions" "Vaccine Dose Administered experienced adverse storage conditions (e.g. cold chain break)"
 * #notevaluated "Not Evaluated" "Vaccine Dose Administered was not evaluated"
-
+* ^jurisdiction.coding = COUNTRY#US "United States of America"
 
 
 ValueSet:		ForecastReason
 Title:			"Forecast Reason"
 Description:	"A set of reasons for the forecast status."
 * codes from system ForecastReason
+* ^jurisdiction.coding = COUNTRY#US "United States of America"
