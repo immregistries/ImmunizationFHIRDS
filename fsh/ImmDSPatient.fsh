@@ -1,4 +1,4 @@
-Alias:			SCT = http://www.snomed.org/sct
+Alias:			SCT = http://snomed.info/sct
 Alias:			LN = http://loinc.org
 Alias:			CVX = http://hl7.org/fhir/sid/cvx
 Alias:			COUNTRY = urn:iso:std:iso:3166
@@ -199,7 +199,7 @@ Description:	"A set of reasons for the evaluation status."
 * #productconflict "Product Conflict" "Vaccine Dose Administered was administered too close to another vaccine or other product (e.g. Immune Globulin conflict or live virus conflict)"
 * #quantity "Insufficient Quantity" "Vaccine Dose Administered amount was less than the recommended amount"
 * #recall "Recalled Product" "Vaccine Dose Administered was recalled by the manufacturer"
-* #storage "Adverse Storate Conditions" "Vaccine Dose Administered experienced adverse storage conditions (e.g. cold chain break)"
+* #storage "Adverse Storage Conditions" "Vaccine Dose Administered experienced adverse storage conditions (e.g. cold chain break)"
 * #notevaluated "Not Evaluated" "Vaccine Dose Administered was not evaluated"
 * ^jurisdiction.coding = COUNTRY#US "United States of America"
 

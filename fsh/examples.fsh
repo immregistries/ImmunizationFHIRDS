@@ -4,7 +4,7 @@ Description: 	"Example Immunization Patient"
 Usage: 			#example
 * id = "ImmDSPatientExample"
 * identifier.value = "1234"
-* identifier.type = http://build.fhir.org/v2/0203/index.html#MR
+* identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#MR
 * identifier.system = "http://www.acme.com/identifiers/patient"
 * name.family = "Wellington"
 * name.given[0] = "Gene"
@@ -18,7 +18,7 @@ Description: 	"Example Immunization Event"
 Usage: 			#example
 * id = "ImmDSImmunizationExample"
 * status = #completed "Completed"
-* vaccineCode = CVX#08 "Hep B Pediatric"
+* vaccineCode = CVX#08 "Hep B, adolescent or pediatric"
 * patient = Reference(ImmDSPatientExample)
 * occurrenceDateTime = "2020-04-28"
 * primarySource = true
@@ -47,7 +47,7 @@ Usage: 			#example
 * id = "immunizationrecommendation-forecast-example"
 * patient = Reference(ImmDSPatientExample)
 * date = "2020-05-26"
-* recommendation[0].vaccineCode = CVX#45 "HepB"
+* recommendation[0].vaccineCode = CVX#45 "Hep B, unspecified formulation"
 * recommendation[0].forecastStatus = ForecastStatus#notComplete "Not Complete"
 * recommendation[0].dateCriterion[0].code = LN#30980-7 "Date vaccine due"
 * recommendation[0].dateCriterion[0].value = "2020-05-28"
@@ -71,7 +71,7 @@ Usage: 			#example
 * recommendation[1].dateCriterion[3].value = "2099-06-28"
 * recommendation[1].doseNumberPositiveInt = 1
 
-* recommendation[2].vaccineCode = CVX#17 "Hib"
+* recommendation[2].vaccineCode = CVX#17 "Hib, unspecified formulation"
 * recommendation[2].forecastStatus = ForecastStatus#notComplete "Not Complete"
 * recommendation[2].dateCriterion[0].code = LN#30980-7 "Date vaccine due"
 * recommendation[2].dateCriterion[0].value = "2020-06-28"
@@ -95,7 +95,7 @@ Usage: 			#example
 * recommendation[3].dateCriterion[3].value = "2099-06-28"
 * recommendation[3].doseNumberPositiveInt = 1
 
-* recommendation[4].vaccineCode = CVX#33 "Pneumococcal"
+* recommendation[4].vaccineCode = CVX#33 "pneumococcal polysaccharide PPV23"
 * recommendation[4].forecastStatus = ForecastStatus#notComplete "Not Complete"
 * recommendation[4].dateCriterion[0].code = LN#30980-7 "Date vaccine due"
 * recommendation[4].dateCriterion[0].value = "2020-06-28"
@@ -107,7 +107,7 @@ Usage: 			#example
 * recommendation[4].dateCriterion[3].value = "2099-06-28"
 * recommendation[4].doseNumberPositiveInt = 1
 
-* recommendation[5].vaccineCode = CVX#122 "Rotavirus"
+* recommendation[5].vaccineCode = CVX#122 "rotavirus, unspecified formulation"
 * recommendation[5].forecastStatus = ForecastStatus#notComplete "Not Complete"
 * recommendation[5].dateCriterion[0].code = LN#30980-7 "Date vaccine due"
 * recommendation[5].dateCriterion[0].value = "2020-06-28"
