@@ -1,6 +1,7 @@
 Alias:			SCT = http://snomed.info/sct
 Alias:			LN = http://loinc.org
 Alias:			CVX = http://hl7.org/fhir/sid/cvx
+Alias:			CVXVS = http://hl7.org/fhir/us/core/ValueSet/us-core-vaccines-cvx
 Alias:			COUNTRY = urn:iso:std:iso:3166
 Alias:			dateCriterion = http://hl7.org/fhir/ValueSet/immunization-recommendation-date-criterion
 
@@ -44,9 +45,9 @@ Id:             immds-immunizationrecommendation
 Title:          "ImmDS Immunization Recommendation"
 Description:    "The set of immunization recommendations for the patient."
 * patient only Reference(ImmDSPatient)
-* recommendation.vaccineCode from CVX (extensible)
+* recommendation.vaccineCode from CVXVS (extensible)
 * recommendation.targetDisease from TargetDisease (extensible)
-* recommendation.contraindicatedVaccineCode from CVX (extensible)
+* recommendation.contraindicatedVaccineCode from CVXVS (extensible)
 * recommendation.forecastStatus from ForecastStatus (preferred)
 * recommendation.forecastReason from ForecastReason (example)
 * recommendation.dateCriterion.code from dateCriterion (extensible)
@@ -96,7 +97,6 @@ Description:	"The Immunization Decision Support Forecast Request operation to pr
 * parameter[4].documentation = "The decision support engine produced forecast."
 * parameter[4].type = #ImmunizationRecommendation
 //* ^jurisdiction.coding = COUNTRY#US "United States of America"
-
 
 
 ValueSet:		TargetDisease
