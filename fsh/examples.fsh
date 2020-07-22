@@ -118,3 +118,30 @@ Usage: 			#example
 * recommendation[5].dateCriterion[3].code = LN#59777-3 "Latest date to give immunization"
 * recommendation[5].dateCriterion[3].value = "2099-06-28"
 * recommendation[5].doseNumberPositiveInt = 1
+
+
+Instance:		ImmDSImmunizationInvalidExample
+InstanceOf: 	ImmDSImmunization
+Description: 	"Example Invalid Immunization Event"
+Usage: 			#example
+* id = "ImmDSImmunizationInvalidExample"
+* status = #completed "Completed"
+* vaccineCode = CVX#83 "Hep A, ped/adol, 2 dose"
+* patient = Reference(ImmDSPatientExample)
+* occurrenceDateTime = "2020-04-28"
+* primarySource = true
+
+
+Instance:		ImmDSImmunizationEvaluationInvalidExample
+InstanceOf: 	ImmDSImmunizationEvaluation
+Description: 	"Example Invalid Immunization Evaluation"
+Usage: 			#example
+* id = "immunization-invalid-evaluation-example"
+* status = #completed "Completed"
+* patient = Reference(ImmDSPatientExample)
+* date = "2020-05-26"
+* targetDisease = SCT#40468003 "Viral hepatitis, type A"
+* immunizationEvent = Reference(ImmDSImmunizationInvalidExample)
+* doseStatus = 	http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status#notvalid "Not Valid"
+* series  = "ACIP 2-dose HepA series"
+* doseStatusReason = http://hl7.org/fhir/us/ImmunizationFHIRDS/CodeSystem/StatusReason#tooYoung "Patient Too Young"
