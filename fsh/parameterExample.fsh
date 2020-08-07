@@ -48,7 +48,7 @@ Usage: 			#example
 * parameter[1].resource.id = "immunizationrecommendation-forecast-example"
 * parameter[1].resource.patient = Reference(ImmDSPatientExample)
 * parameter[1].resource.date = "2020-05-26"
-* parameter[1].resource.recommendation[0].vaccineCode = CVX#45 "Hep B, unspecified formulation"
+* parameter[1].resource.recommendation[0].vaccineCode = CVX#45 "Hep B, NOS"
 * parameter[1].resource.recommendation[0].forecastStatus = ForecastStatus#notComplete "Not Complete"
 * parameter[1].resource.recommendation[0].dateCriterion[0].code = LN#30980-7 "Date vaccine due"
 * parameter[1].resource.recommendation[0].dateCriterion[0].value = "2020-05-28"
@@ -72,7 +72,7 @@ Usage: 			#example
 * parameter[1].resource.recommendation[1].dateCriterion[3].value = "2099-06-28"
 * parameter[1].resource.recommendation[1].doseNumberPositiveInt = 1
 
-* parameter[1].resource.recommendation[2].vaccineCode = CVX#17 "Hib, unspecified formulation"
+* parameter[1].resource.recommendation[2].vaccineCode = CVX#17 "Hib, NOS"
 * parameter[1].resource.recommendation[2].forecastStatus = ForecastStatus#notComplete "Not Complete"
 * parameter[1].resource.recommendation[2].dateCriterion[0].code = LN#30980-7 "Date vaccine due"
 * parameter[1].resource.recommendation[2].dateCriterion[0].value = "2020-06-28"
@@ -96,7 +96,7 @@ Usage: 			#example
 * parameter[1].resource.recommendation[3].dateCriterion[3].value = "2099-06-28"
 * parameter[1].resource.recommendation[3].doseNumberPositiveInt = 1
 
-* parameter[1].resource.recommendation[4].vaccineCode = CVX#33 "pneumococcal polysaccharide PPV23"
+* parameter[1].resource.recommendation[4].vaccineCode = CVX#33 "pneumococcal"
 * parameter[1].resource.recommendation[4].forecastStatus = ForecastStatus#notComplete "Not Complete"
 * parameter[1].resource.recommendation[4].dateCriterion[0].code = LN#30980-7 "Date vaccine due"
 * parameter[1].resource.recommendation[4].dateCriterion[0].value = "2020-06-28"
@@ -108,7 +108,7 @@ Usage: 			#example
 * parameter[1].resource.recommendation[4].dateCriterion[3].value = "2099-06-28"
 * parameter[1].resource.recommendation[4].doseNumberPositiveInt = 1
 
-* parameter[1].resource.recommendation[5].vaccineCode = CVX#122 "rotavirus, unspecified formulation"
+* parameter[1].resource.recommendation[5].vaccineCode = CVX#122 "rotavirus, NOS1"
 * parameter[1].resource.recommendation[5].forecastStatus = ForecastStatus#notComplete "Not Complete"
 * parameter[1].resource.recommendation[5].dateCriterion[0].code = LN#30980-7 "Date vaccine due"
 * parameter[1].resource.recommendation[5].dateCriterion[0].value = "2020-06-28"
